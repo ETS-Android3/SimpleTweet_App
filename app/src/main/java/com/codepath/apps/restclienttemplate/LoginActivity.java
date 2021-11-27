@@ -1,6 +1,5 @@
 package com.codepath.apps.restclienttemplate;
 
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,6 +25,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		sampleModelDao = ((TwitterApp) getApplicationContext()).getMyDatabase().sampleModelDao();
 
 		AsyncTask.execute(() -> sampleModelDao.insertModel(sampleModel));
+
 	}
 
 
@@ -41,9 +41,8 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 	@Override
 	public void onLoginSuccess() {
 		Log.i("karp","login success");
-		Intent i = new Intent(this,
-				TimelineActivity.class);
-		startActivity(i);
+//		Intent i = new Intent(this,TimelineActivity.class);
+//		startActivity(i);
 	}
 
 	// OAuth authentication flow failed, handle the error
